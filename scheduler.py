@@ -6,11 +6,7 @@ from main import main
 # Create scheduler
 ist = pytz.timezone('Asia/Kolkata')
 scheduler = BlockingScheduler(timezone=ist)
-def test():
-    print('works..')
+
 # Run at 9:30 AM and 7:00 PM, Monday to Friday
 scheduler.add_job(main, CronTrigger(day_of_week='mon-fri', hour='9,19', minute='30,0',timezone=ist))
-scheduler.add_job(test, CronTrigger(day_of_week='mon-fri', hour='1', minute='56',timezone=ist))
-print("Scheduler started. Press Ctrl+C to stop.")
 scheduler.start()
-print('Scheduler Stopped')
