@@ -1,3 +1,5 @@
+#run this in the terminal and minimize
+
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
 import pytz
