@@ -28,7 +28,7 @@ def greathr_logger(driver,user_name:str, password:str) -> None:
     login_button.click()
     time.sleep(5)
     #click signIn/signOut button
-    driver.maximize_window()                    # set window size
+    driver.set_window_size(1920, 1080)          # set window size
     driver.execute_script("window.scrollBy(0, 200);") # scroll a little down
     time.sleep(2)
     shadow_host = driver.find_element(By.CSS_SELECTOR, "gt-button")
